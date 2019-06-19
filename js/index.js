@@ -26,19 +26,40 @@ buttonClick.forEach( (item) => {
     });
 });
 
-const headerDrag = document.querySelectorAll('h4');
+const headerDrag = document.querySelector('h1');
+// console.log(headerDrag)
 
-headerDrag.forEach( (item) => {
-    item.addEventListener("dragstart", event => {
-        event.target.style.border = "1px solid red";
+    headerDrag.addEventListener("dragstart", () => {
+        headerDrag.style.color = "red";
+        // console.log(event.target.value);
     });
 
-    item.addEventListener("drag", event => {
-        event.target.style.border = "1px dotted black";
+    headerDrag.addEventListener("drag", event => {
+        event.target.style.backgroundColor = "black";
+        console.dir(event.target);
     });
 
-    item.addEventListener("dragend", event => {
-        event.target.style.border = "1px dashed purple";
+    headerDrag.addEventListener("dragend", event => {
+        event.target.style.backgroundColor = "purple";
     });
+
+// on load
+
+
+// on scroll
+
+// nested event
+
+
+
+// preventDefault
+
+const navDisable = document.querySelectorAll('nav a');
+
+navDisable.forEach((item) => {
+
+    item.addEventListener("click", event => {
+        event.preventDefault();
+    });
+
 });
-
