@@ -65,4 +65,4 @@ navDisable.forEach((item) => {
 });
 
 
-TweenMax.to("img", 2, {x:0, z:1, rotation:360});
+TweenMax.from("img", 0.5, {opacity:0, scale:0, ease:Bounce.easeOut});
