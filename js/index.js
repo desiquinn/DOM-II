@@ -23,6 +23,7 @@ const buttonClick = document.querySelectorAll('.btn');
 buttonClick.forEach( (item) => {
     item.addEventListener("click", event => {
         event.target.style.backgroundColor = "pink";
+        TweenMax.to("buttonClick", 2, {x:0, rotation:360,});
     });
 });
 
@@ -66,3 +67,4 @@ navDisable.forEach((item) => {
 
 
 TweenMax.from("img", 0.5, {opacity:0, scale:0, ease:Bounce.easeOut});
+TweenMax.from(".logo-heading", 2, {x:600});
